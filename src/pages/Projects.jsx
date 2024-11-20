@@ -12,15 +12,15 @@ const Projects = () => {
             category: "Web Design",
             date: "September, 2024",
             description: "A web-based system to manage cafeteria billing, track orders, and generate invoices. It aims to make the process delightful and efficient, developed using Java in an IDE.",
-            github: "https://github.com/Damyanti29/Cafeteria_Billing_System"  // GitHub link for project1
+            github: "https://github.com/Damyanti29/Cafeteria_Billing_System"  
         },
         {
             title: "Portfolio",
-            image: project2,  // Using the second image here
+            image: project2,  
             category: "Web Development",
             date: "November, 2024",
             description: "A personal portfolio built with HTML, CSS, and JavaScript running on Node.js, showcasing my skills and learnings till now.",
-            github: "https://github.com/Damyanti29/portfolio"  // GitHub link for project2
+            github: "https://github.com/Damyanti29/Portfolio-Website"  
         }
     ];
 
