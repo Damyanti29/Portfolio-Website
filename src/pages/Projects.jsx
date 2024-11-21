@@ -25,47 +25,42 @@ const Projects = () => {
     ];
 
     return (
-        
-            <div className="flex flex-col items-center py-16 px-8 md:px-16 bg-gray-50 min-h-screen">
-                {/* Heading */}
-                <div className="flex items-center justify-between mb-2 w-full">
-                    <h2 className="text-4xl font-bold">Projects</h2>
-                    <GoProjectSymlink size={36} />
-                </div>
-                <hr className="border-t border-dotted border-gray-400 w-full mb-8" />
-
-                {/* Project Blocks */}
-                <div className="flex flex-col gap-8 w-full">
-                    {projects.map((project, index) => (
-                        <div key={index} className="flex gap-6 mb-8">
-                            <div className="flex w-full gap-6 items-center p-10">
-
-                                {/* Image Container: Take 50% width */}
-                                <div className="w-1/2">
-                                    <img
-                                        src={project.image}
-                                        alt={project.title}
-                                        className="w-full h-80 object-cover rounded-lg shadow-lg"
-                                    />
-                                </div>
-
-                                {/* Description Section: Take 50% width */}
-                                <div className="w-full sm:w-full lg:w-1/2 flex flex-col justify-center text-gray-700">
-                                    <p className="text-xl text-black font-semibold mb-2">{project.title}</p>
-                                    <p className="text-base mb-4 text-gray-700">{project.description}</p>
-                                    <p className="text-sm text-gray-500 mb-4">{project.date}</p>
-                                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="mt-4">
-                                        <button className="px-6 py-1 border border-blue-500 text-blue-500 font-semibold rounded hover:bg-black hover:text-white transition">
-                                            GitHub
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+        <div className="flex flex-col items-center py-16 px-8 md:px-16 bg-gray-50 min-h-screen">
+            {/* Heading */}
+            <div className="flex items-center justify-between mb-2 w-full">
+                <h2 className="text-4xl font-bold">Projects</h2>
+                <GoProjectSymlink size={36} />
             </div>
-       
+            <hr className="border-t border-dotted border-gray-400 w-full mb-8" />
+
+            {/* Project Blocks */}
+            <div className="flex flex-col gap-8 w-full">
+                {projects.map((project, index) => (
+                    <div key={index} className="flex flex-col sm:flex-row gap-6 mb-8">
+                        {/* Image Container: Stack on small screens */}
+                        <div className="w-full sm:w-1/2">
+                            <img
+                                src={project.image}
+                                alt={project.title}
+                                className="w-full h-80 object-cover rounded-lg shadow-lg"
+                            />
+                        </div>
+
+                        {/* Description Section: Stack on small screens */}
+                        <div className="w-full sm:w-1/2 flex flex-col justify-center text-gray-700 mt-4 sm:mt-0">
+                            <p className="text-xl text-black font-semibold mb-2">{project.title}</p>
+                            <p className="text-base mb-4 text-gray-700 text-xl">{project.description}</p>
+                            <p className="text-sm text-gray-500 mb-4">{project.date}</p>
+                            <a href={project.github} target="_blank" rel="noopener noreferrer" className="mt-4">
+                                <button className="px-6 py-1 border border-blue-500 text-blue-500 font-semibold rounded hover:bg-black hover:text-white transition">
+                                    GitHub
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
     );
 };
 
